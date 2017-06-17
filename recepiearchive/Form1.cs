@@ -40,6 +40,13 @@ namespace RecepieScraper
             logTimer.Interval = 1000;
             logTimer.Elapsed += logTimer_Elapsed;
             logTimer.Start();
+
+            if (File.Exists("lowCarbThreshold.txt"))
+            {
+                StreamReader sr = new StreamReader("lowCarbThreshold.txt");
+                nup_CarbThreshold.Value = decimal.Parse(sr.ReadLine());
+                sr.Close();
+            }
         }
 
         private void logTimer_Elapsed(Object source, ElapsedEventArgs e)
@@ -257,7 +264,7 @@ namespace RecepieScraper
                         orderedRecepieList = orderedRecepieList.Where(w => w.Rating != 1).ToList();
 
                     if(showLowCarbOnlyToolStripMenuItem.Checked)
-                        orderedRecepieList = orderedRecepieList.Where(w => w.Carbs < 7).ToList();
+                        orderedRecepieList = orderedRecepieList.Where(w => w.Carbs < nup_CarbThreshold.Value).ToList();
 
 
                     foreach (Recepie recepie in orderedRecepieList)
@@ -315,6 +322,23 @@ namespace RecepieScraper
         {
             showLowCarbOnlyToolStripMenuItem.Checked = !showLowCarbOnlyToolStripMenuItem.Checked;
             InsertRecepiesIntoListViews();
+        }
+
+        private void nup_CarbThreshold_ValueChanged(object sender, EventArgs e)
+        {
+            if (showLowCarbOnlyToolStripMenuItem.Checked)
+                InsertRecepiesIntoListViews();
+
+            try
+            {
+                StreamWriter sw = new StreamWriter("lowCarbThreshold.txt");
+                sw.WriteLine(nup_CarbThreshold.Value);
+                sw.Close();
+            }
+            catch
+            {
+                
+            }
         }
     }
 }

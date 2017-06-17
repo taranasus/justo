@@ -63,9 +63,12 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbLog = new System.Windows.Forms.TextBox();
             this.showLowCarbOnlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nup_CarbThreshold = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.recepieMenu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nup_CarbThreshold)).BeginInit();
             this.SuspendLayout();
             // 
             // thumbNails
@@ -149,7 +152,7 @@
             this.toolStripSeparator1,
             this.openInRecepieToolStripMenuItem});
             this.recepieMenu.Name = "recepieMenu";
-            this.recepieMenu.Size = new System.Drawing.Size(161, 170);
+            this.recepieMenu.Size = new System.Drawing.Size(161, 148);
             // 
             // addToolStripMenuItem
             // 
@@ -352,11 +355,36 @@
             this.showLowCarbOnlyToolStripMenuItem.Text = "Show Low Carb Only";
             this.showLowCarbOnlyToolStripMenuItem.Click += new System.EventHandler(this.showLowCarbOnlyToolStripMenuItem_Click);
             // 
+            // nup_CarbThreshold
+            // 
+            this.nup_CarbThreshold.DecimalPlaces = 1;
+            this.nup_CarbThreshold.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nup_CarbThreshold.Location = new System.Drawing.Point(466, 34);
+            this.nup_CarbThreshold.Name = "nup_CarbThreshold";
+            this.nup_CarbThreshold.Size = new System.Drawing.Size(227, 20);
+            this.nup_CarbThreshold.TabIndex = 10;
+            this.nup_CarbThreshold.ValueChanged += new System.EventHandler(this.nup_CarbThreshold_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(355, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Low Carb Threshodl:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1243, 889);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.nup_CarbThreshold);
             this.Controls.Add(this.tbLog);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tbSearch);
@@ -373,6 +401,7 @@
             this.recepieMenu.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nup_CarbThreshold)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,6 +442,8 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.TextBox tbLog;
         private System.Windows.Forms.ToolStripMenuItem showLowCarbOnlyToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown nup_CarbThreshold;
+        private System.Windows.Forms.Label label1;
     }
 }
 
