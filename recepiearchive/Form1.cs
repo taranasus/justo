@@ -113,7 +113,7 @@ namespace RecepieScraper
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
-            if (tbSearch.Text.Length > 1)
+            if (tbSearch.Text.Length == 0 || tbSearch.Text.Length > 2)
                 InsertRecepiesIntoListViews();
         }
 
@@ -256,6 +256,9 @@ namespace RecepieScraper
                     if (dontShow1ToolStripMenuItem.Checked)
                         orderedRecepieList = orderedRecepieList.Where(w => w.Rating != 1).ToList();
 
+                    if(showLowCarbOnlyToolStripMenuItem.Checked)
+                        orderedRecepieList = orderedRecepieList.Where(w => w.Carbs < 7).ToList();
+
 
                     foreach (Recepie recepie in orderedRecepieList)
                     {
@@ -306,6 +309,12 @@ namespace RecepieScraper
         {
             About about = new About();
             about.Show();
+        }
+
+        private void showLowCarbOnlyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showLowCarbOnlyToolStripMenuItem.Checked = !showLowCarbOnlyToolStripMenuItem.Checked;
+            InsertRecepiesIntoListViews();
         }
     }
 }

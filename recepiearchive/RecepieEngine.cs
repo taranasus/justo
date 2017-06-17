@@ -228,6 +228,7 @@ namespace RecepieScraper
 
             recepie.LastUpdated = DateTimeOffset.UtcNow;
             recepie.Calories = int.Parse(webstring.Split(new string[] { " nutritional-info-table" }, StringSplitOptions.None)[1].Split(new string[] { " kcal" }, StringSplitOptions.None)[1].Split(new string[] { "<br/>" }, StringSplitOptions.None)[1]);
+            recepie.Carbs = decimal.Parse(webstring.Split(new string[] { " nutritional-info-table" }, StringSplitOptions.None)[1].Split(new string[] { "Carbohydrate<br>" }, StringSplitOptions.None)[1].Split(new string[] { " g<br" }, StringSplitOptions.None)[0].Split(new string[] { "<td>" }, StringSplitOptions.None)[1]);
             recepie.PrepTime = int.Parse(webstring.Split(new string[] { "Prep Time</p>" }, StringSplitOptions.None)[1]
                 .Split(new string[] { "<p class=\"recipehighlight-box-value\">" }, StringSplitOptions.None)[1]
                 .Split(new string[] { " min</p>" }, StringSplitOptions.None)[0]);

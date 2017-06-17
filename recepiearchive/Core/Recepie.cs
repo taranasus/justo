@@ -22,6 +22,6 @@ namespace RecepieScraper.Core
         public int Rating { get; set; }
         public byte[] ThumbnailImageBytes { get; set; }
         public bool IgnoreProductCompletely { get; set; }
-
+        public decimal Carbs { get; set; }
     }
 }

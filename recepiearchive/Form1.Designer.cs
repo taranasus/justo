@@ -62,6 +62,7 @@
             this.reScrapeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbLog = new System.Windows.Forms.TextBox();
+            this.showLowCarbOnlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.recepieMenu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -148,7 +149,7 @@
             this.toolStripSeparator1,
             this.openInRecepieToolStripMenuItem});
             this.recepieMenu.Name = "recepieMenu";
-            this.recepieMenu.Size = new System.Drawing.Size(161, 148);
+            this.recepieMenu.Size = new System.Drawing.Size(161, 170);
             // 
             // addToolStripMenuItem
             // 
@@ -258,7 +259,8 @@
             // filtersToolStripMenuItem
             // 
             this.filtersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dontShow1ToolStripMenuItem});
+            this.dontShow1ToolStripMenuItem,
+            this.showLowCarbOnlyToolStripMenuItem});
             this.filtersToolStripMenuItem.Name = "filtersToolStripMenuItem";
             this.filtersToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.filtersToolStripMenuItem.Text = "Filters";
@@ -266,7 +268,7 @@
             // dontShow1ToolStripMenuItem
             // 
             this.dontShow1ToolStripMenuItem.Name = "dontShow1ToolStripMenuItem";
-            this.dontShow1ToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.dontShow1ToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.dontShow1ToolStripMenuItem.Text = "Don\'t Show 1 ★";
             this.dontShow1ToolStripMenuItem.Click += new System.EventHandler(this.dontShow1ToolStripMenuItem_Click);
             // 
@@ -305,7 +307,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -320,7 +322,7 @@
             // reScrapeToolStripMenuItem
             // 
             this.reScrapeToolStripMenuItem.Name = "reScrapeToolStripMenuItem";
-            this.reScrapeToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.reScrapeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.reScrapeToolStripMenuItem.Text = "ReScrape";
             this.reScrapeToolStripMenuItem.Click += new System.EventHandler(this.reScrapeToolStripMenuItem_Click);
             // 
@@ -342,6 +344,13 @@
             this.tbLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbLog.Size = new System.Drawing.Size(680, 92);
             this.tbLog.TabIndex = 9;
+            // 
+            // showLowCarbOnlyToolStripMenuItem
+            // 
+            this.showLowCarbOnlyToolStripMenuItem.Name = "showLowCarbOnlyToolStripMenuItem";
+            this.showLowCarbOnlyToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.showLowCarbOnlyToolStripMenuItem.Text = "Show Low Carb Only";
+            this.showLowCarbOnlyToolStripMenuItem.Click += new System.EventHandler(this.showLowCarbOnlyToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -403,6 +412,7 @@
         private System.Windows.Forms.ToolStripMenuItem reScrapeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.TextBox tbLog;
+        private System.Windows.Forms.ToolStripMenuItem showLowCarbOnlyToolStripMenuItem;
     }
 }
 
