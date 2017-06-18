@@ -3,7 +3,6 @@ C:\Users\taran\OneDrive\Documents\Visual Studio 2017\Projects\recepiearchive\rec
 C:\Users\taran\OneDrive\Documents\Visual Studio 2017\Projects\recepiearchive\recepiearchive\bin\Debug\recepiearchive.pdb
 C:\Users\taran\OneDrive\Documents\Visual Studio 2017\Projects\recepiearchive\recepiearchive\bin\Debug\Newtonsoft.Json.dll
 C:\Users\taran\OneDrive\Documents\Visual Studio 2017\Projects\recepiearchive\recepiearchive\bin\Debug\Newtonsoft.Json.xml
-C:\Users\taran\OneDrive\Documents\Visual Studio 2017\Projects\recepiearchive\recepiearchive\obj\Debug\recepiearchive.csprojResolveAssemblyReference.cache
 C:\Users\taran\OneDrive\Documents\Visual Studio 2017\Projects\recepiearchive\recepiearchive\obj\Debug\RecepieScraper.About.resources
 C:\Users\taran\OneDrive\Documents\Visual Studio 2017\Projects\recepiearchive\recepiearchive\obj\Debug\RecepieScraper.Form1.resources
 C:\Users\taran\OneDrive\Documents\Visual Studio 2017\Projects\recepiearchive\recepiearchive\obj\Debug\recepiearchive.Properties.Resources.resources
